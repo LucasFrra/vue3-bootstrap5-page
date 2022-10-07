@@ -8,6 +8,7 @@
 </template>
 
 <script>
+// Charts use chart.js library
 import Chart from 'chart.js/auto';
 export default {
    name: "myChartSessions",

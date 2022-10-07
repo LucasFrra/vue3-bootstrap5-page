@@ -1,3 +1,4 @@
+// store.js for the sidebar left
 import { reactive } from "vue";
 
 export const store = reactive({

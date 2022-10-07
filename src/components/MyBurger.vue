@@ -1,5 +1,6 @@
 <!-- Burger Component-->
 <template>
+    <!-- Adding or removing the active class based on isBurgerActive -->
     <div id="burger" :class="{ 'active' : isBurgerActive }" @click.prevent="toggle">
         <slot>
             <div class="container-fluid">
