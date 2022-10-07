@@ -1,6 +1,8 @@
-# vue3-bootstrap5-page
+# CoreUI Template - VUE.JS 3 | Bootstrap 5
+Cette page est un projet réalisé dans le cadre d'un entretien d'embauche. Celui-ci est réalisé en Vue.JS/cli 5.0.8 avec Bootstrap 5.
 
-## Project setup
+
+## Installation et setup
 ```
 npm install
 ```
