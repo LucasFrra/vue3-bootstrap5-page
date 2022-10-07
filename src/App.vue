@@ -1,26 +1,58 @@
+<!-- App Main template -->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <div id="topsection" class="d-flex">
+      <!-- Show the sidebar with the class "sidebarLeft" if the panel is open -->
+      <div v-if="isPanelOpen">
+        <MySidebar class="sidebarleft"/>
+      </div>
+      
+      <div class="flex-grow-1">
+        <MyHeader />
+        <MyBody />
+      </div>
+
+
+    </div>
+
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import { store } from '@/store.js'
+import MySidebar from "./components/MySidebar.vue";
+import MyHeader from "./components/MyHeader.vue";
+import MyBody from "./components/MyBody.vue";
 
 export default {
-  name: 'App',
+  name: "app",
   components: {
-    HelloWorld
-  }
-}
-</script>
+    MySidebar,
+    MyHeader,
+    MyBody
+},
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+computed: {
+        isPanelOpen() {
+            return store.isNavOpen
+        }
+    }
+};
+</script>
+<style scoped>
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarleft{
+  width:255px;
+}
+
+#topsection{
+  background-color: #EBEDEF;
 }
 </style>
